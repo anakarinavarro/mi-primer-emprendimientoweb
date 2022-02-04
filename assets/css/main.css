@@ -1,0 +1,372 @@
+html body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "banner banner banner banner" "izquierda izquierda derecha derecha";
+}
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-areas: "banner banner banner banner" "izquierda izquierda izquierda izquierda" "derecha derecha derecha derecha";
+  }
+}
+
+.banner {
+  grid-area: banner;
+  text-align: center;
+}
+.banner img {
+  height: 250px;
+}
+@media screen and (max-width: 600px) {
+  .banner img {
+    width: 100%;
+    height: unset;
+  }
+}
+
+.izquierda {
+  grid-area: izquierda;
+  border: 1px solid #060606;
+  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.derecha {
+  grid-area: derecha;
+  border: 1px solid #060606;
+  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.seccion {
+  border: 1px solid #2E1503;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+.seccion img {
+  width: 100%;
+}
+.seccion h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.seccion p {
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+}
+.seccion h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.seccion .iconos__ul {
+  justify-content: left;
+}
+.seccion .iconos__ul li a {
+  color: #060606;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.seccion .iconos__ul span {
+  margin-left: 5px;
+}
+
+.sass {
+  border: 1px solid #2E1503;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+.sass img {
+  width: 100%;
+}
+.sass h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.sass p {
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+}
+.sass h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.sass .iconos__ul {
+  justify-content: left;
+}
+.sass .iconos__ul li a {
+  color: #060606;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.sass .iconos__ul span {
+  margin-left: 5px;
+}
+
+.derecha__articulo-img {
+  display: flex;
+  justify-content: center;
+}
+.derecha__articulo-img img {
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #2E1503;
+  object-fit: cover;
+  object-position: center;
+  text-align: center;
+}
+.derecha__articulo-h3 {
+  background-color: grey;
+  color: #ffffff;
+  display: block;
+}
+.derecha__articulo ul {
+  list-style-type: circle;
+  color: indigo;
+}
+.derecha__articulo svg {
+  width: 200px;
+}
+.derecha .svg-container {
+  text-align: center;
+}
+.derecha .svg-container svg path.cog {
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 80% 80%;
+}
+.derecha .svg-container svg path.centro {
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 80% 80%;
+}
+.derecha .svg-container svg path.codigo {
+  animation: codigo 1s linear infinite alternate;
+}
+.derecha h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.derecha p {
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+}
+.derecha .iconos__ul {
+  justify-content: center;
+}
+.derecha .iconos__ul li a {
+  color: #060606;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.derecha .iconos__ul span {
+  margin-left: 5px;
+}
+
+.iconos__ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+html body {
+  min-width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__logo--img {
+  width: 48px;
+  padding: 5px;
+}
+.navbar__menu {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+.navbar__menu--items {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.navbar__menu--items li {
+  list-style-type: none;
+}
+.navbar__menu--items a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (max-width: 600px) {
+  .navbar__menu--items {
+    display: none;
+  }
+}
+.navbar__mobile {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  .navbar__mobile {
+    display: none;
+  }
+}
+.navbar__mobile--items {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.navbar__mobile--items li {
+  list-style-type: none;
+}
+.navbar__mobile--items a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (max-width: 600px) {
+  .navbar__mobile--items {
+    display: block;
+  }
+}
+@media screen and (min-width: 600px) {
+  .navbar__mobile--items {
+    display: none;
+  }
+}
+
+.footer {
+  background-color: #000000;
+  padding: 20px 30px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 14px;
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-flow: column;
+    width: calc(100% - 60px);
+  }
+}
+.footer__izquierda {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .footer__izquierda {
+    width: 100%;
+  }
+}
+.footer__izquierda p {
+  color: #ffffff;
+  margin: 0;
+}
+.footer__derecha {
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .footer__derecha {
+    width: 100%;
+  }
+}
+.footer__derecha p {
+  color: #ffffff;
+  margin: 0;
+}
+.footer__derecha ul {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  list-style-type: none;
+  padding: 0;
+}
+@media screen and (max-width: 600px) {
+  .footer__derecha ul {
+    flex-flow: column;
+  }
+}
+.footer__derecha li {
+  padding: 0 20px;
+}
+@media screen and (max-width: 600px) {
+  .footer__derecha li {
+    padding: 10px 0px;
+  }
+}
+.footer__derecha button {
+  background-color: #ffaf6d;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes centro {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes codigo {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(30px);
+  }
+}
+@keyframes fondo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

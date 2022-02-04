@@ -1,0 +1,58 @@
+.footer{
+    background-color: #000000;
+    padding: 20px 30px;
+    font-family: $popins;
+    display: flex;
+    @media screen and (max-width:$small-media) {
+        flex-flow: column;
+        width: calc(100% - 60px);
+    }
+    align-content: center;
+    justify-content: center;
+    font-size: $small;
+    &__izquierda{
+        width: 50%;
+        @media screen and (max-width:$small-media) {
+            width: 100%;
+        }
+        p{
+            color: $white;
+            margin: 0;
+        }
+    }
+    &__derecha{
+        width: 50%;
+        @media screen and (max-width:$small-media) {
+            width: 100%;
+        }
+        p{
+            color: $white;
+            margin: 0;
+        }
+        ul{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            color: $white;
+            list-style-type: none;
+            padding: 0;
+            @media screen and (max-width:$small-media) {
+                flex-flow: column;
+            }
+
+        }
+        li{
+            padding: 0 20px;
+            @media screen and (max-width:$small-media) {
+                padding: 10px 0px;
+            }
+        }
+        button{
+            background-color: $tangerine;
+            color: $black;
+            font-family: $popins;
+            border-radius: 4px;
+
+        }
+    }
+}

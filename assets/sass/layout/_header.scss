@@ -1,0 +1,85 @@
+html body{
+    min-width: 100%;
+    
+}
+.navbar{
+    width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+
+    &__logo{
+        &--img {
+            width: 48px;
+            padding: 5px;
+        }   
+    }
+    &__menu{
+        padding: 0px;
+        display: flex;
+        align-items: center;
+
+        &--items{
+            display: flex;
+            flex-direction: row;
+            margin-left: 5px;
+            margin-right: 5px;
+            li{
+                list-style-type: none;
+            }
+            a{
+                color: white;
+                padding: 10px;
+                text-decoration: none;
+                font-family: $popins;
+                font-size:$small ;
+                font-weight: $normal;
+            }
+            @media screen and (max-width:$small-media) {
+             display: none;
+            }
+
+        }
+
+        
+    
+
+    }
+    &__mobile{
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        @media screen and (min-width:$small-media) {
+            display: none;
+        }
+
+        &--items{
+            display: flex;
+            flex-direction: row;
+            margin-left: 5px;
+            margin-right: 5px;
+            li{
+                list-style-type: none;
+            }
+            a{
+                color: white;
+                padding: 10px;
+                text-decoration: none;
+                font-family: $popins;
+                font-size:$small ;
+                font-weight: $normal;
+            }
+            @media screen and (max-width:$small-media) {
+             display: block;
+            }
+            @media screen and (min-width:$small-media) {
+                display: none;
+               }
+
+        }
+
+        
+    
+
+    }
+}

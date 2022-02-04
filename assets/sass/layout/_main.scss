@@ -1,0 +1,192 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "banner banner banner banner"
+      "izquierda izquierda derecha derecha";
+    @media screen and (max-width:$small-media) {
+        grid-template-areas: 
+      "banner banner banner banner"
+      "izquierda izquierda izquierda izquierda"
+      "derecha derecha derecha derecha";
+    }
+  }
+  .banner{
+      grid-area: banner;
+      text-align: center;
+      img{
+          height: 250px;
+            @media screen and (max-width:$small-media) {
+                width: 100%;
+                height: unset;
+            }
+
+      }
+  }
+  .izquierda{
+    grid-area: izquierda;
+    border: 1px solid $sable;
+    padding: 10px;
+    font-family: $ubuntu;
+  }
+  .derecha{
+    grid-area: derecha;
+    border: 1px solid $sable;
+    padding: 10px;
+    font-family: $ubuntu;
+  }
+  .seccion{
+      border: 1px solid $charcoal;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-family: $ubuntu;
+        img{
+            width: 100%;
+        }
+        h3{
+            font-size: $large;
+            font-weight: $negrita;
+        }
+        p{
+            font-size: $small;
+            font-weight: $normal;
+            color: grey;
+        }
+        h5{
+            font-size:$medium;
+            font-weight: $negrita;
+
+        }
+        .iconos__ul{
+            justify-content: left;
+            li a{
+                color: $sable;
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+            }
+            span{
+                margin-left: 5px;
+            }
+
+        }
+  }
+  .sass{
+    border: 1px solid $charcoal;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: $ubuntu;
+      img{
+        width: 100%;
+    }
+    h3{
+        font-size: $large;
+        font-weight: $negrita;
+    }
+    p{
+        font-size: $small;
+        font-weight: $normal;
+        color: grey;
+    }
+    h5{
+        font-size:$medium;
+        font-weight: $negrita;
+
+    }
+    .iconos__ul{
+        justify-content: left;
+        li a{
+            color: $sable;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        span{
+            margin-left: 5px;
+        }
+
+    }
+  }
+  .derecha{
+      &__articulo{
+        &-img{
+            display: flex;
+            justify-content: center;
+            img{
+              width: 200px;
+              border-radius: 50%;
+              border: 1px solid $charcoal;
+              object-fit: cover;
+              object-position: center;
+              text-align: center;
+      
+            }
+        }
+        &-h3{
+            background-color: grey;
+            color: $white;
+            
+            display: block;
+        }
+        ul{
+            list-style-type: circle;
+            color: indigo;
+        }
+        svg{
+            width: 200px;
+        }
+    }   
+    .svg-container{
+        text-align: center;
+        svg path.cog{
+            animation-name: spin;
+            animation-timing-function: linear;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            transform-origin: 80% 80%;
+        }
+        svg path.centro{
+            animation-name: spin;
+            animation-timing-function: linear;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            transform-origin: 80% 80%;
+        }
+        svg path.codigo{
+            animation: codigo 1s linear infinite alternate;
+        }
+    }
+    h3{
+        font-size: $large;
+        font-weight: $negrita;
+        text-align: center;
+    }
+    p{
+        font-size: $small;
+        font-weight: $normal;
+        color: grey;
+    }
+    .iconos__ul{
+        justify-content: center;
+        li a{
+            color: $sable;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        span{
+            margin-left: 5px;
+        }
+
+    }
+  }
+
+.iconos__ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
